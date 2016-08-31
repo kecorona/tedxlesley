@@ -91,6 +91,13 @@ section {
     position: relative;
     padding: 90px  0;
 }
+
+.two-columns {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
 .block.remove-gap {
     padding-top: 0;
 }
@@ -1138,6 +1145,12 @@ canvas {
     -o-transition:all 0.2s ease 0.1s;
     transition:all 0.2s ease 0.1s;
 }
+
+.offer p.columns {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
 .offer:hover{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1870,7 +1883,7 @@ canvas {
     float: left;
     padding: 80px 50px;
     position: relative;
-    text-align: center;
+    text-align: bottom;
     width: 100%;
     z-index: 10;
     border: 15px solid #f0f0f0;
@@ -1906,6 +1919,7 @@ canvas {
     position: relative;
     width: 100%;
 }
+
 .fun-facts {
     float: left;
     width: 100%;
@@ -1990,7 +2004,7 @@ footer .widget ul li {
     margin-bottom: 50px;
     position: relative;
     width: 100%;
-    background: url(../images/about-bg.png) no-repeat scroll center transparent;
+    background: url(../images/send.png) no-repeat scroll center transparent;
 }
 .about:before {
     content: "" ;
@@ -2076,12 +2090,22 @@ footer .widget ul li {
 .map {
     float: left;
     position: relative;
-    width: 100%;
+    width:340px;
+    height:340px;
+    max-width:100%;
+    list-style:none;
+    transition: none;
+    overflow:hidden;
+}
+#gmap-canvas {
+    height:100%;
+    width:100%;
+    max-width:100%;
 }
 .map iframe {
     border: 0 none;
     float: left;
-    height: 340px;
+    height: 100%;
     width: 100%;
 }
 .map:before {
